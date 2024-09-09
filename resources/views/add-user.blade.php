@@ -21,22 +21,37 @@
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Nome Completo</label>
                         <input type="text" name="nome_completo" class="form-control" id="formGroupExampleInput" placeholder="Dogote seu nome completo">
+                        @error('nome_completo')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Email</label>
                         <input type="email" name="email" class="form-control" placeholder="Digite seu melhor email">
+                      @error('email')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Celular</label>
                         <input type="text" name="celular" class="form-control" placeholder="Digite seu celular">
+                      @error('celular')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Senha</label>
                         <input type="password" name="senha" class="form-control" placeholder="Digite sua senha">
+                      @error('senha')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Confirmar Senha</label>
                         <input type="password" name="confirma_senha" class="form-control" placeholder="Confirme a sua senha">
+                      {{-- @error('confirma_senha')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror --}}
                     </div>
 
                     <button class="btn btn-primary" type="submit">Salvar</button>

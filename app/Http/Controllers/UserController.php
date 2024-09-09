@@ -17,4 +17,15 @@ class UserController extends Controller
     {
         return view('add-user');
     }
+    public function AddUser(Request $request)
+    {
+        $request->validate([
+           'nome_completo' => 'required|string',
+           'email' => 'required|email',
+           'celular' => 'required|integer',
+           'senha' => 'required|confrmed|min:4|max:8',
+        ]);
+        // $all_users = User::all();
+        return view('add-user');
+    }
 }
