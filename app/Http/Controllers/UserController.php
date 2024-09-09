@@ -43,4 +43,14 @@ class UserController extends Controller
         // $all_users = User::all();
         return view('add-user');
     }
+
+    public function deleteUser($id)
+    {
+        try {
+            User::where('id', $id)->delete();
+            return redirect('/users')->with('success', 'Usuario Deletado com Sucesso');
+        } catch (\Exception $ex) {
+            return redirect('/users')->with('fail', $ex->getMessage());
+        }
+    }
 }
