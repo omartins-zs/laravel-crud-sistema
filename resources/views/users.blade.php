@@ -23,7 +23,7 @@
             <div class="card-body">
                 <table class="table table-sm table-striped table-bordered">
                     <thead>
-                        <th>S/NULL</th>
+                        <th>ID</th>
                         <th>Nome Completo</th>
                         <th>Email</th>
                         <th>Celular</th>
@@ -31,7 +31,19 @@
                         <th>Ultima atualização</th>
                     </thead>
                     <tbody>
-
+                        @if (count($all_users) > 0)
+                            @foreach ($all_users as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->nome_completo }}</td>
+                                    <td>{{ $item->email }}</td>
+                                    <td>{{ $item->celular }}</td>
+                                    <td>{{ $item->created_at }}</td>
+                                    <td>{{ $item->updated_at }}</td>
+                                </tr>
+                            @endforeach
+                        @else
+                        @endif
                     </tbody>
                 </table>
             </div>
