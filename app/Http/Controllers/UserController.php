@@ -39,9 +39,35 @@ class UserController extends Controller
         } catch (\Exception $ex) {
             return redirect('/add/user')->with('fail', $ex->getMessage());
         }
+        // return view('add-user');
+    }
 
-        // $all_users = User::all();
-        return view('add-user');
+    public function loadEditForm($id)
+    {
+        $user = User::find($id);
+
+        return view('edit-user', compact('user'));
+    }
+    
+    public function EditUser(Request $request)
+    {
+        $request->validate([
+            'nome_completo' => 'required|string',
+            'email' => 'required|email',
+            'celular' => 'required',
+        ]);
+
+        try {
+            $usuario_atualizado = User::where('id', $request->user_id)->update([
+                'nome_completo' => $request->nome_completo,
+                'email' => $request->email,
+                'celular' => $request->celular,
+            ]);
+
+            return redirect('/users')->with('success', 'Usuario Atualizado com Sucesso');
+        } catch (\Exception $ex) {
+            return redirect('/edit/user')->with('fail', $ex->getMessage());
+        }
     }
 
     public function deleteUser($id)
