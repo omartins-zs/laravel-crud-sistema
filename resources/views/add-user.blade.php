@@ -13,6 +13,9 @@
     <div class="container">
         <div class="card">
             <div class="card-header">Adicionar novo usuario
+                @if (Session::has('fail'))
+                    <span class="alert alert-danger p-2">{{Session::get('fail')}}</span>
+                @endif
                 <a href="/add/user" class="btn btn-success btn-sm float-end ">Cadastrar usuario</a>
             </div>
             <div class="card-body">
