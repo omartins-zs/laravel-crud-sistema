@@ -29,6 +29,7 @@
                         <th>Celular</th>
                         <th>Data de Registro</th>
                         <th>Ultima atualização</th>
+                        <th colspan="2">Ações</th>
                     </thead>
                     <tbody>
                         @if (count($all_users) > 0)
@@ -40,6 +41,10 @@
                                     <td>{{ $item->celular }}</td>
                                     <td>{{ $item->created_at }}</td>
                                     <td>{{ $item->updated_at }}</td>
+                                    <td>
+                                        <a href="/edit/{{$item->id}}" class="btn btn-primary btn-sm">Editar</a>
+                                        <a href="/delete/{{$item->id}}" class="btn btn-danger btn-sm">Excluir</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         @else
