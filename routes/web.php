@@ -22,3 +22,7 @@ Route::get(
     '/users',
     [UserController::class, 'loadAllUsers']
 );
+Route::get(
+    '/add/user',
+    [UserController::class, 'loadAllUserForm']
+);
