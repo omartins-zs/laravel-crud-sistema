@@ -20,6 +20,9 @@
             @if (Session::has('success'))
                 <span class="alert alert-success p-2">{{ Session::get('success') }}</span>
             @endif
+            @if (Session::has('fail'))
+                <span class="alert alert-danger p-2">{{ Session::get('fail') }}</span>
+            @endif
             <div class="card-body">
                 <table class="table table-sm table-striped table-bordered">
                     <thead>
