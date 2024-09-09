@@ -1,0 +1,9 @@
+php artisan serve
+
+php artisan migrate
+
+php artisan make:controller UserController
+
+php artisan migrate:fresh
+
+Tutorial: https://www.youtube.com/watch?v=B8_6kJgoQQI&ab_channel=codewithSJM
