@@ -16,6 +16,7 @@
         <div class="card">
             <div class="card-header">
                 Laravel 11 CRUD Sistema
+                <a href="/add/user" class="btn btn-success btn-sm float-end ">Cadastrar usuario</a>
             </div>
             <div class="card-body">
                 <table class="table table-sm table-striped table-bordered">
