@@ -11,6 +11,30 @@
 
 <body>
 
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Laravel 11 CRUD Sistema
+            </div>
+            <div class="card-body">
+                <table class="table table-sm table-striped table-bordered">
+                    <thead>
+                        <th>S/NULL</th>
+                        <th>Nome Completo</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>Data de Registro</th>
+                        <th>Ultima atualização</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
