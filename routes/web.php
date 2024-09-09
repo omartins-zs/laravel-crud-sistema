@@ -23,4 +23,7 @@ Route::get( '/add/user', [UserController::class, 'loadAllUserForm']);
 
 Route::post('/add/user', [UserController::class, 'AddUser'])->name('AddUser');
 
-Route::delete('/delete/{id}', [UserController::class, 'deleteUser']);
+Route::get('/delete/{id}', [UserController::class, 'deleteUser']);
+Route::get('/edit/{id}', [UserController::class, 'loadEditForm']);
+
+Route::post('/edit/user', [UserController::class, 'EditUser'])->name('EditUser');
