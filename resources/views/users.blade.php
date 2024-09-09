@@ -45,12 +45,15 @@
                                     <td>{{ $item->created_at }}</td>
                                     <td>{{ $item->updated_at }}</td>
                                     <td>
-                                        <a href="/edit/{{$item->id}}" class="btn btn-primary btn-sm">Editar</a>
-                                        <a href="/delete/{{$item->id}}" class="btn btn-danger btn-sm">Excluir</a>
+                                        <a href="/edit/{{ $item->id }}" class="btn btn-primary btn-sm">Editar</a>
+                                        <a href="/delete/{{ $item->id }}" class="btn btn-danger btn-sm">Excluir</a>
                                     </td>
                                 </tr>
                             @endforeach
                         @else
+                            <tr>
+                                <td colspan="8">Não tem usuarios!</td>
+                            </tr>
                         @endif
                     </tbody>
                 </table>
